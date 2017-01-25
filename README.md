@@ -1,4 +1,6 @@
 # webpack-usage-example
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/opensheetmusicdisplay/webpack-usage-example.svg)](https://greenkeeper.io/)
 An example how to use opensheetmusicdisplay with a webpack build.
 
 ## Usage
