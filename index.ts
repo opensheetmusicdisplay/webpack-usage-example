@@ -1,6 +1,6 @@
-import { OSMD } from "opensheetmusicdisplay";
+import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
 
-let osmd: OSMD;
+let osmd: OpenSheetMusicDisplay;
 
 /*
  * Create a container element for OpenSheetMusicDisplay...
@@ -16,7 +16,9 @@ document.body.appendChild(container);
  * the container we've created in the steps before. The second parameter tells OSMD
  * not to redraw on resize.
  */
-osmd = new OSMD(container, false);
+osmd = new OpenSheetMusicDisplay(container, false);
+osmd.setLogLevel('info');
+
 /*
  * Load our MusicXMl and display it. The file is renamed by Webpack during bundling, it's
  * Muzio Clementi's Sonatina Opus 36 No 1, Part 1, which you can find next to this file.

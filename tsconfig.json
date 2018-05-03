@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "noImplicitAny": true,
-    "removeComments": true
+    "removeComments": true,
+    "preserveConstEnums": true
   },
-  "awesomeTypescriptLoaderOptions": {},
-  "exclude": [
-    "node_modules"
+  "files": [
+    "index.ts"
   ]
 }
