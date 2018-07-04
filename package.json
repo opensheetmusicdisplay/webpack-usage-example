@@ -1,6 +1,6 @@
 {
   "name": "webpack-usage-example",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "An example how to use OpenSheetMusicDisplay within a Webpack build.",
   "main": "index.js",
   "scripts": {
