@@ -13,10 +13,11 @@ let container: HTMLElement = <HTMLElement>document.createElement("div");
 document.body.appendChild(container);
 /*
  * Create a new instance of OpenSheetMusicDisplay and tell it to draw inside
- * the container we've created in the steps before. The second parameter tells OSMD
- * not to redraw on resize.
+ * the container we've created in the steps before.
+ * The second parameter is an IOSMDOptions object.
+ * autoResize tells OSMD not to redraw on resize.
  */
-osmd = new OpenSheetMusicDisplay(container, false);
+osmd = new OpenSheetMusicDisplay(container, {autoResize: false});
 osmd.setLogLevel('info');
 
 /*

@@ -1,5 +1,5 @@
 # webpack-usage-example
-An example how to use OpenSheetMusicDisplay within a Webpack build. Uses TypeScript.
+An example how to use [OpenSheetMusicDisplay](https://github.com/opensheetmusicdisplay/opensheetmusicdisplay) within a Webpack build. Uses TypeScript.
 
 ## Usage
 ```
