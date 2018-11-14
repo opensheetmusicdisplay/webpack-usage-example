@@ -53,14 +53,14 @@ function loadMusicXML(url: string) {
 	      break;
 	      case 4 : // COMPLETED
 	      	osmd
-						.load(xhttp.responseXML)
-						.then(
-							() => {
-								osmd.render();
-								afterRender();
-							},
-							(err) => console.log(err)
-						);
+				.load(xhttp.responseXML)
+				.then(
+					() => {
+						osmd.render();
+						afterRender();
+					},
+					(err) => console.log(err)
+				);
 	      	break;
 	      default:
 	      	throw("Error loading MusicXML file.");
