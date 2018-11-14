@@ -1,4 +1,4 @@
-import { OpenSheetMusicDisplay, Cursor, VoiceEntry, Note, StemDirectionType  } from "opensheetmusicdisplay";
+import { OpenSheetMusicDisplay, Cursor, VoiceEntry, Note, StemDirectionType } from "opensheetmusicdisplay";
 
 let osmd: OpenSheetMusicDisplay;
 
@@ -34,7 +34,7 @@ function afterRender() {
 	const cursorVoiceEntry: VoiceEntry = cursor.Iterator.CurrentVoiceEntries[0];
 	const baseNote: Note = cursorVoiceEntry.Notes[0];
 	console.log("Stem direction of VoiceEntry under Cursor: " + StemDirectionType[cursorVoiceEntry.StemDirection]);
-	console.log("first note of second cursor position: " + baseNote.Pitch.ToString());
+	console.log("base note of Voice Entry at second cursor position: " + baseNote.Pitch.ToString());
 
 	osmd.setOptions( { autoResize: true });
 }

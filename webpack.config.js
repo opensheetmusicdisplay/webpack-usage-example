@@ -23,12 +23,15 @@ const config = {
     ]
   },
   plugins: [
-  new HtmlWebpackPlugin({ title: 'opensheetmusicdisplay | webpack-usage-example' }),
+  new HtmlWebpackPlugin({
+    title: 'opensheetmusicdisplay | webpack-usage-example',
+    favicon: 'resources/favicon.ico' // an empty favicon.ico is provided in the repo to prevent 404s
+  }),
   new CopyWebpackPlugin([
   {
-    from: 'MuzioClementi_SonatinaOpus36No1_Part1.xml',
+    from: 'resources/MuzioClementi_SonatinaOpus36No1_Part1.xml',
     to: 'musicXmlSample.xml'
-  }
+  },
   ])
   ]
 };
