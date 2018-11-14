@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const config = {
   entry: './index.ts',
   mode: 'production',
+  devtool: 'inline-source-map',
   output: {
     path: __dirname + '/dist',
     filename: 'index.bundle.js'
@@ -22,12 +23,15 @@ const config = {
     ]
   },
   plugins: [
-  new HtmlWebpackPlugin({ title: 'opensheetmusicdisplay | webpack-usage-example' }),
+  new HtmlWebpackPlugin({
+    title: 'opensheetmusicdisplay | webpack-usage-example',
+    favicon: 'resources/favicon.ico' // not providing a favicon.ico can cause 404 warnings
+  }),
   new CopyWebpackPlugin([
   {
-    from: 'MuzioClementi_SonatinaOpus36No1_Part1.xml',
+    from: 'resources/MuzioClementi_SonatinaOpus36No1_Part1.xml',
     to: 'musicXmlSample.xml'
-  }
+  },
   ])
   ]
 };

@@ -1,4 +1,4 @@
-import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
+import { OpenSheetMusicDisplay, Cursor, VoiceEntry, Note, StemDirectionType } from "opensheetmusicdisplay";
 
 let osmd: OpenSheetMusicDisplay;
 
@@ -26,6 +26,19 @@ osmd.setLogLevel('info');
  */
 loadMusicXML("musicXmlSample.xml");
 
+/** Some example code to use OSMD classes after rendering a score. */
+function afterRender() {
+	let cursor: Cursor = osmd.cursor;
+	cursor.show();
+	cursor.next();
+	const cursorVoiceEntry: VoiceEntry = cursor.Iterator.CurrentVoiceEntries[0];
+	const baseNote: Note = cursorVoiceEntry.Notes[0];
+	console.log("Stem direction of VoiceEntry under Cursor: " + StemDirectionType[cursorVoiceEntry.StemDirection]);
+	console.log("base note of Voice Entry at second cursor position: " + baseNote.Pitch.ToString());
+
+	osmd.setOptions( { autoResize: true });
+}
+
 /**
  * Load a MusicXml file via xhttp request, and display its contents.
  */
@@ -42,7 +55,10 @@ function loadMusicXML(url: string) {
 	      	osmd
 						.load(xhttp.responseXML)
 						.then(
-							() => osmd.render(),
+							() => {
+								osmd.render();
+								afterRender();
+							},
 							(err) => console.log(err)
 						);
 	      	break;

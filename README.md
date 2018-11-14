@@ -15,6 +15,8 @@ If you decided to play around and make changes, you can trigger a rebuild anytim
 $ npm run webpack
 ```
 
+You may have to do a hard refresh in the browser (Ctrl+F5), Chrome sometimes caches the old page and compiled index.ts.
+
 ## Project structure
 * `index.ts` - the application's entry point, contains all sources
 * `webpack.config.js` - Webpack configuration
