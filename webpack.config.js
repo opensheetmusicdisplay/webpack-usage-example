@@ -25,7 +25,7 @@ const config = {
   plugins: [
   new HtmlWebpackPlugin({
     title: 'opensheetmusicdisplay | webpack-usage-example',
-    favicon: 'resources/favicon.ico' // an empty favicon.ico is provided in the repo to prevent 404s
+    favicon: 'resources/favicon.ico' // not providing a favicon.ico can cause 404 warnings
   }),
   new CopyWebpackPlugin([
   {
