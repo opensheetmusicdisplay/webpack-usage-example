@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const config = {
   entry: './index.ts',
   mode: 'production',
+  devtool: 'inline-source-map',
   output: {
     path: __dirname + '/dist',
     filename: 'index.bundle.js'
