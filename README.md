@@ -21,7 +21,9 @@ You may have to do a hard refresh in the browser (Ctrl+F5), Chrome sometimes cac
 * `index.ts` - the application's entry point, contains all sources
 * `webpack.config.js` - Webpack configuration
 * `tsconfig.json` - TypeScript compiler configuration
-* `MuzioClementi_SonatinaOpus36No1_Part1.xml` - the MusicXML file to be displayed
+* `Resources/` - Resources folder for project data
+  * `MuzioClementi_SonatinaOpus36No1_Part1.xml` - the MusicXML file to be displayed
+  * `favicon.ico` - OSMD icon for the tab bar
 
 ### Build artifacts
-* `dist/` - directory containing all build artifacts, will be served on `npm start`
+* `dist/` - directory containing all build artifacts, will be served from a local http server on `npm start`
