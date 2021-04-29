@@ -36,6 +36,6 @@
     "webpack-cli": "^3.0.8"
   },
   "dependencies": {
-    "opensheetmusicdisplay": "^0.6.4"
+    "opensheetmusicdisplay": "^0.9.5"
   }
 }
