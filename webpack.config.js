@@ -27,12 +27,14 @@ const config = {
     title: 'opensheetmusicdisplay | webpack-usage-example',
     favicon: 'resources/favicon.ico' // not providing a favicon.ico can cause 404 warnings
   }),
-  new CopyWebpackPlugin([
-  {
-    from: 'resources/MuzioClementi_SonatinaOpus36No1_Part1.xml',
-    to: 'musicXmlSample.xml'
-  },
-  ])
+  new CopyWebpackPlugin({
+    patterns: [
+      {
+        from: 'resources/MuzioClementi_SonatinaOpus36No1_Part1.xml',
+        to: 'musicXmlSample.xml'
+      },
+    ]
+  })
   ]
 };
 
